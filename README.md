@@ -8,7 +8,7 @@ Criar uma interface em react com suporte a criação, edição, exclusão e leit
 
 - URL Base: https://api.teste.frontend.pessoalize.com: 
 
-- ```
+ ```
    // Path para criar um produto
     /products/create
 	method: POST
@@ -19,7 +19,8 @@ Criar uma interface em react com suporte a criação, edição, exclusão e leit
     "price": 900.0,
     "description": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat."
 	}
- 
+ ```
+ ```
    // Path para atualizar um produto
     /products/{id_do_produto}
 	method: PUT
@@ -30,18 +31,13 @@ Criar uma interface em react com suporte a criação, edição, exclusão e leit
     "price": 900.0,
     "description": "asddasdsadsasadsadd."
 }
-
+ ```
+ ```
    // Path para deletar um produto
     /products/{id_do_produto}
 	method: DELETE
-	body: {
-	   "amount": 28798,
-    "picture": "http://dummyimage.com/107x156.bmp/ff4444/ffffff",
-    "name": "Tart - Butter Plain Squares",
-    "price": 900.0,
-    "description": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat."
-	}
-
+ ```
+ ```
    // Path para criar um variação do produto
     /products/variant/create/{id_do_produto}
 	method: POST
@@ -52,18 +48,13 @@ Criar uma interface em react com suporte a criação, edição, exclusão e leit
     "price": 900.0,
     "description": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat."
 }
-
-	// Path para deletar uma variação do produto
-	/products/variant/{id_do_produto}
+ ```
+ ```
+   // Path para deletar uma variação do produto
+    /products/variant/{id_do_produto}
 	method: DELETE
-	body: {
-	   "amount": 28798,
-    "picture": "http://dummyimage.com/107x156.bmp/ff4444/ffffff",
-    "name": "Tart - Butter Plain Squares",
-    "price": 900.0,
-    "description": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat."
-	}
- 
+ ```
+ ```
    // Path para atualizar a variação de um produto
     /products/variant/{id_do_produto}
 	method: PUT
@@ -74,7 +65,8 @@ Criar uma interface em react com suporte a criação, edição, exclusão e leit
     "price": 900.0,
     "description": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat."
 	}
-
+ ```
+ ```
    //Socket para listar os produtos
     socket.on("GET_ALL_PRODUCTS", (products) => {
        console.log(products);
