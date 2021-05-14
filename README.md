@@ -84,6 +84,7 @@ Criar uma interface em react com suporte a criação, edição, exclusão e leit
 - Funcionamento do produto entregue.
 - Seguir o padrão RESTful.
 - Socket
+- A sua imaginação no front end para fazer um layout massa :)
 
 ### Processo de submissão
 
