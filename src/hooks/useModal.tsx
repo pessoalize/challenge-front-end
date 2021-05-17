@@ -1,5 +1,5 @@
 import { createContext, ReactNode, useContext, useState } from "react";
-import ReactModal from 'react-modal'
+import { Modal } from "../components/Modal";
 
 type ModalContextData = {
   openModal(modalContent: ReactNode): void
@@ -28,13 +28,9 @@ export function ModalProvider({ children }: ModalProviderProps) {
   return (
     <ModalContext.Provider value={{ openModal, closeModal }}>
       {children}
-      <ReactModal
-        isOpen={isOpen}
-        ariaHideApp={false}
-        onRequestClose={closeModal}
-      >
+      <Modal isOpen={isOpen}>
         {content}
-      </ReactModal>
+      </Modal>
     </ModalContext.Provider>
   )
 }
