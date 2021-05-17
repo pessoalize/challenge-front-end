@@ -25,6 +25,9 @@ export function Dashboard() {
     <>
       <Header />
       <Container>
+        <header>
+          <h1>Produtos</h1>
+        </header>
         <Grid>
           {products.map((product) => (
             <Card key={product._id}>
