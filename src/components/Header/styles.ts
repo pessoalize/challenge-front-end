@@ -2,6 +2,6 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   min-height: 14rem;
-  background: #020C17;
+  background: var(--blue-900);
   margin-bottom: -10rem;
 `
