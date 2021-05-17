@@ -1,14 +1,18 @@
 import { BrowserRouter } from 'react-router-dom'
 import Routes from './router'
 import { ModalProvider } from './hooks/useModal'
+import GlobalStyle from './styles/global'
 
 function App() {
   return (
-    <ModalProvider>
-      <BrowserRouter>
-        <Routes />
-      </BrowserRouter>
-    </ModalProvider>
+    <>
+      <GlobalStyle />
+      <ModalProvider>
+        <BrowserRouter>
+          <Routes />
+        </BrowserRouter>
+      </ModalProvider>
+    </>
   );
 }
 
