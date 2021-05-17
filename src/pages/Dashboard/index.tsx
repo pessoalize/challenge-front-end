@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Header } from '../../components/Header'
 import socket from '../../services/socket'
+import { Card, Container, AddButton, Grid } from './styles'
 
 type Product = {
   _id: string
@@ -23,15 +24,22 @@ export function Dashboard() {
   return (
     <>
       <Header />
-        {products.map((product) => (
-          <div key={product._id}>
-            <img src={product.picture} alt="" />
-            Name: {product.name}
-            Price: {product.price}
-            Amount: {product.amount}
-          </div>
-        ))}
-      </div>
+      <Container>
+        <Grid>
+          {products.map((product) => (
+            <Card key={product._id}>
+              <header>
+                <img src={product.picture} alt="" />
+              </header>
+              <div>
+                <h2>{product.name}</h2>
+                Price: {product.price}
+                Amount: {product.amount}
+              </div>
+            </Card>
+          ))}
+        </Grid>
+      </Container>
     </>
   )
 }
