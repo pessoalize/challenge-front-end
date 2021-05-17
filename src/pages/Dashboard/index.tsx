@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Header } from '../../components/Header'
 import socket from '../../services/socket'
 
 type Product = {
@@ -21,8 +22,7 @@ export function Dashboard() {
 
   return (
     <>
-      <h1>Products</h1>
-      <div>
+      <Header />
         {products.map((product) => (
           <div key={product._id}>
             <img src={product.picture} alt="" />
