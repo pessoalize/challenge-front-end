@@ -15,7 +15,23 @@ export const Container = styled.div`
   }
 `
 
+export const AddButton = styled.button`
+  border: none;
+  border-radius: .25rem;
+  color: var(--white);
+  padding: 0 1.5rem;
+  height: 3rem;
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  background: var(--green-300);
+  transition: filter .2s;
+
+  &:hover {
+    filter: brightness(.9)
+  }
 `
+
 export const Grid = styled.div`
   display: grid;
   grid-gap: 2rem;

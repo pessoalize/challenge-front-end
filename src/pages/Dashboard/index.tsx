@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
+import { AddProductModal } from '../../components/AddProductModal'
 import { Header } from '../../components/Header'
+import { useModal } from '../../hooks/useModal'
 import socket from '../../services/socket'
 import { Card, Container, AddButton, Grid } from './styles'
 
@@ -14,6 +16,7 @@ type Product = {
 
 export function Dashboard() {
   const [products, setProducts] = useState<Product[]>([])
+  const { openModal } = useModal()
 
   useEffect(() => {
     socket.on('GET_ALL_PRODUCTS', (products: Product[]) => {
@@ -27,6 +30,7 @@ export function Dashboard() {
       <Container>
         <header>
           <h1>Produtos</h1>
+          <AddButton onClick={() => openModal(<AddProductModal />)}>Novo Produto</AddButton>
         </header>
         <Grid>
           {products.map((product) => (
