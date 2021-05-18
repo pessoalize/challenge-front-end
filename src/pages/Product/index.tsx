@@ -67,6 +67,8 @@ export function Product() {
           </AddButton>
         </header>
 
+        {!product.variants.length && <p>Nenhuma variação existente.</p>}
+
         <Grid>
           {product.variants.map(variant => (
             <Card key={variant._id}>
