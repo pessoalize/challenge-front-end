@@ -40,11 +40,13 @@ export const MainProduct = styled.div`
   @media (min-width: 1080px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    min-height: 24rem;
   }
   
   > div:first-child {
     background: var(--gray-500);
     display: flex;
+    min-height: 12rem;
     justify-content: center;
     align-items: center;
     img {
@@ -159,8 +161,11 @@ export const Card = styled.div`
   header {
     background-color: var(--gray-500);
     width: 100%;
+    min-height: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     img {
-      margin: 0 auto;
       max-width: 100%;
       height: auto;
       display: block;
