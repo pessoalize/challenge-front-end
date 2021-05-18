@@ -27,7 +27,7 @@ export const BackButton = styled.button`
   height: 3rem;
   border: none;
   color: var(--white);
-  font-size: 2rem;
+  font-size: 3rem;
 `
 
 export const MainProduct = styled.div`
