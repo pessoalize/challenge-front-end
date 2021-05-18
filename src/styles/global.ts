@@ -18,7 +18,9 @@ export default createGlobalStyle`
 
     --blue-900: #020C17;
 
-    --green-300: #59CE30
+    --green-300: #59CE30;
+
+    --red-500: #ff3e3e;
   }
 
   html {

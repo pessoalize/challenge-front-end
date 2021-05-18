@@ -7,6 +7,7 @@ import { useHistory } from 'react-router'
 import formatPrice from "../../utils/formatPrice";
 import { useModal } from "../../hooks/useModal";
 import { EditProductModal } from "../../components/EditProductModal";
+import { DeleteProductModal } from "../../components/DeleteProductModal";
 
 export function Product() {
   const { id } = useParams<{ id: string }>()
@@ -49,7 +50,7 @@ export function Product() {
               <ActionButton onClick={() => openModal(<EditProductModal productId={product._id} />)}>
                 <FiEdit /> <span>Editar</span>
               </ActionButton>
-              <ActionButton>
+              <ActionButton onClick={() => openModal(<DeleteProductModal productId={product._id} />)}>
                 <FiTrash /> <span>Excluir</span>
               </ActionButton>
             </footer>

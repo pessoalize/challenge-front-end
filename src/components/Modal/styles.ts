@@ -6,7 +6,7 @@ export const Container = styled(ReactModal)`
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  min-height: 30rem;
+  min-height: 15rem;
   width: 40rem;
   max-width: 100%;
   max-height: 100%;

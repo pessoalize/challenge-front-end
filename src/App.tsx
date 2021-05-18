@@ -8,13 +8,13 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <ProductsProvider>
-        <ModalProvider>
-          <BrowserRouter>
+      <BrowserRouter>
+        <ProductsProvider>
+          <ModalProvider>
             <Routes />
-          </BrowserRouter>
-        </ModalProvider>
-      </ProductsProvider>
+          </ModalProvider>
+        </ProductsProvider>
+      </BrowserRouter>
     </>
   );
 }
