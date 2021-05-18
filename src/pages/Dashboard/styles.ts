@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const Container = styled.div`
   max-width: 1280px;
@@ -42,7 +43,7 @@ export const Grid = styled.div`
   }
 `
 
-export const Card = styled.div`
+export const Card = styled(Link)`
   border-radius: .25rem;
   overflow: hidden;
   text-decoration: none;
@@ -69,7 +70,16 @@ export const Card = styled.div`
     background: var(--gray-100);
     color: var(--gray-700);
     h2 {
-      color: var(--gray-900)
+      color: var(--gray-900);
+      padding-bottom: .5rem;
+    }
+
+    p {
+      padding: .25rem 0;
+
+      em {
+        font-size: 1.5rem;
+      }
     }
  }
 `

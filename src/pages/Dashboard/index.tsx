@@ -19,7 +19,7 @@ export function Dashboard() {
         </header>
         <Grid>
           {products.map((product) => (
-            <Card key={product._id}>
+            <Card key={product._id} to={`/products/${product._id}`}>
               <header>
                 <img src={product.picture} alt="" />
               </header>
@@ -27,7 +27,7 @@ export function Dashboard() {
                 <h2>{product.name}</h2>
                 <p>
                   <em>
-                  {formatPrice(product.price)}
+                    {formatPrice(product.price)}
                   </em>
                 </p>
                 <p>{product.amount} unidades</p>
