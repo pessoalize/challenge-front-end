@@ -1,28 +1,13 @@
-import { useEffect, useState } from 'react'
 import { AddProductModal } from '../../components/AddProductModal'
 import { Header } from '../../components/Header'
 import { useModal } from '../../hooks/useModal'
-import socket from '../../services/socket'
+import { useProducts } from '../../hooks/useProducts'
+import formatPrice from '../../utils/formatPrice'
 import { Card, Container, AddButton, Grid } from './styles'
 
-type Product = {
-  _id: string
-  amount: number
-  picture: string
-  name: string
-  price: number
-  description: string
-}
-
 export function Dashboard() {
-  const [products, setProducts] = useState<Product[]>([])
+  const { products } = useProducts()
   const { openModal } = useModal()
-
-  useEffect(() => {
-    socket.on('GET_ALL_PRODUCTS', (products: Product[]) => {
-      setProducts(products)
-    })
-  }, [])
 
   return (
     <>
@@ -40,8 +25,11 @@ export function Dashboard() {
               </header>
               <div>
                 <h2>{product.name}</h2>
-                Price: {product.price}
-                Amount: {product.amount}
+                <p>
+                  {formatPrice(product.price)}
+                </p>
+                <p>{product.amount} unidades</p>
+                <p>{product.variants.length} variações</p>
               </div>
             </Card>
           ))}
