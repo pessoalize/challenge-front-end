@@ -6,11 +6,11 @@ export const Container = styled(ReactModal)`
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  min-height: 15rem;
+  min-height: 12rem;
   width: 40rem;
   max-width: 100%;
   max-height: 100%;
-  padding: 3rem;
+  padding: 2.5rem 2rem;
   overflow: auto;
   background: var(--white);
   border-radius: .25rem;
