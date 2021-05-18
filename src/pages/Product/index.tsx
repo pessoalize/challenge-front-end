@@ -8,6 +8,7 @@ import formatPrice from "../../utils/formatPrice";
 import { useModal } from "../../hooks/useModal";
 import { EditProductModal } from "../../components/EditProductModal";
 import { DeleteProductModal } from "../../components/DeleteProductModal";
+import { AddVariantModal } from "../../components/AddVariantModal";
 
 export function Product() {
   const { id } = useParams<{ id: string }>()
@@ -59,7 +60,7 @@ export function Product() {
 
         <header>
           <h2>Variações</h2>
-          <AddButton>
+          <AddButton onClick={() => openModal(<AddVariantModal productId={product._id} />)}>
             Nova Variação
           </AddButton>
         </header>
