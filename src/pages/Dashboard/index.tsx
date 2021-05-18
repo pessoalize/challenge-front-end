@@ -30,8 +30,14 @@ export function Dashboard() {
                     {formatPrice(product.price)}
                   </em>
                 </p>
-                <p>{product.amount} unidades</p>
-                <p>{product.variants.length} variações</p>
+                <p>{product.amount} {product.amount === 1
+                  ? <span>unidade</span>
+                  : <span>unidades</span>}
+                </p>
+                <p>{product.variants.length} {product.variants.length === 1
+                  ? <span>variação</span>
+                  : <span>variações</span>}
+                </p>
               </div>
             </Card>
           ))}

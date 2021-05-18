@@ -46,8 +46,9 @@ export function Product() {
                 {formatPrice(product.price)}
               </em>
             </p>
-            <p>
-              {product.amount} unidades
+            <p>{product.amount} {product.amount === 1
+              ? <span>unidade</span>
+              : <span>unidades</span>}
             </p>
             <footer>
               <ActionButton onClick={() => openModal(<EditProductModal productId={product._id} />)}>
@@ -82,7 +83,10 @@ export function Product() {
                     {formatPrice(variant.price)}
                   </em>
                 </p>
-                <p>{variant.amount} unidades</p>
+                <p>{variant.amount} {variant.amount === 1
+                  ? <span>unidade</span>
+                  : <span>unidades</span>}
+                </p>
               </div>
               <footer>
                 <ActionButton
