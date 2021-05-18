@@ -21,7 +21,7 @@ export function Dashboard() {
           {products.map((product) => (
             <Card key={product._id} to={`/products/${product._id}`}>
               <header>
-                <img src={product.picture} alt="" />
+                <img src={product.picture} alt={product.name} />
               </header>
               <div>
                 <h2>{product.name}</h2>

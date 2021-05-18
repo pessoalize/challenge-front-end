@@ -32,7 +32,7 @@ export function Product() {
 
         <MainProduct>
           <div>
-            <img src={product.picture} alt="" />
+            <img src={product.picture} alt={product.name} />
           </div>
           <div>
             <header>
@@ -74,7 +74,7 @@ export function Product() {
           {product.variants.map(variant => (
             <Card key={variant._id}>
               <header>
-                <img src={variant.picture} alt="" />
+                <img src={variant.picture} alt={variant.name} />
               </header>
               <div>
                 <h3>{variant.name}</h3>
