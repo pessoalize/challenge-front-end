@@ -39,6 +39,7 @@ export default createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     background-color: var(--white);
     color: var(--gray-900);
+    overflow-y: scroll;
   }
 
   button {
