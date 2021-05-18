@@ -26,7 +26,9 @@ export function Dashboard() {
               <div>
                 <h2>{product.name}</h2>
                 <p>
+                  <em>
                   {formatPrice(product.price)}
+                  </em>
                 </p>
                 <p>{product.amount} unidades</p>
                 <p>{product.variants.length} variações</p>

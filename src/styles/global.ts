@@ -48,4 +48,14 @@ export default createGlobalStyle`
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   }
+
+  em {
+    font-style: normal;
+    color: var(--green-300);
+    font-weight: 700;
+  }
+
+  h1, h2, h3 {
+    font-weight: 400;
+  }
 `

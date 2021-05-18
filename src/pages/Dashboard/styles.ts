@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const Container = styled.div`
   max-width: 1280px;
   margin: 0 auto;
-  color: var(--gray-100);
   padding: 0 2rem 3rem;
 
   > header {
@@ -12,6 +11,7 @@ export const Container = styled.div`
     flex: 1;
     align-items: center;
     margin-bottom: 2.5rem;
+    color: var(--gray-100)
   }
 `
 
@@ -36,11 +36,21 @@ export const Grid = styled.div`
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: repeat( auto-fit, minmax(15rem, 1fr) );
+
+  @media(min-width: 1080px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 `
 
 export const Card = styled.div`
   border-radius: .25rem;
   overflow: hidden;
+  text-decoration: none;
+  transition: filter .2s;
+
+  &:hover {
+    filter: drop-shadow(0 0 8px var(--gray-700))
+  }
 
   header {
     height: 12rem;
