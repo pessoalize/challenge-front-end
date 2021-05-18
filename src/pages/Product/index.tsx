@@ -9,6 +9,7 @@ import { useModal } from "../../hooks/useModal";
 import { EditProductModal } from "../../components/EditProductModal";
 import { DeleteProductModal } from "../../components/DeleteProductModal";
 import { AddVariantModal } from "../../components/AddVariantModal";
+import { DeleteVariantModal } from "../../components/DeleteVariantModal";
 
 export function Product() {
   const { id } = useParams<{ id: string }>()
@@ -84,7 +85,13 @@ export function Product() {
                 <ActionButton>
                   <FiEdit />
                 </ActionButton>
-                <ActionButton>
+                <ActionButton
+                  onClick={
+                    () => openModal(
+                      <DeleteVariantModal productId={product._id} variantId={variant._id} />
+                    )
+                  }
+                >
                   <FiTrash />
                 </ActionButton>
               </footer>
