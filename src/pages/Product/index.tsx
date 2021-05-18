@@ -5,12 +5,15 @@ import { ActionButton, BackButton, Container, MainProduct, AddButton, Grid, Card
 import { FiChevronLeft, FiEdit, FiTrash } from 'react-icons/fi'
 import { useHistory } from 'react-router'
 import formatPrice from "../../utils/formatPrice";
+import { useModal } from "../../hooks/useModal";
+import { EditProductModal } from "../../components/EditProductModal";
 
 export function Product() {
   const { id } = useParams<{ id: string }>()
   const { getProduct } = useProducts()
   const product = getProduct(id)
   const { goBack } = useHistory();
+  const { openModal } = useModal()
 
   if (!product) return null
 
@@ -43,7 +46,7 @@ export function Product() {
               {product.amount} unidades
             </p>
             <footer>
-              <ActionButton>
+              <ActionButton onClick={() => openModal(<EditProductModal productId={product._id} />)}>
                 <FiEdit /> <span>Editar</span>
               </ActionButton>
               <ActionButton>
