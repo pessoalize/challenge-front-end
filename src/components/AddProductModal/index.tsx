@@ -2,6 +2,7 @@ import { useModal } from "../../hooks/useModal"
 import api from "../../services/api"
 import { ProductDetailsForm } from "../ProductDetailsForm"
 import { Container } from "./styles"
+import { toast } from 'react-toastify'
 
 type Product = {
   id: string
@@ -19,8 +20,9 @@ export function AddProductModal() {
     try {
       console.log(product)
       await api.post('products/create', product)
+      toast.success('Produto adicionado com sucesso!')
     } catch (err) {
-      console.log(err)
+      toast.error('Ocorreu um erro ao adicionar o produto!')
     } finally {
       closeModal()
     }

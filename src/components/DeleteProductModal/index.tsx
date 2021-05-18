@@ -3,6 +3,7 @@ import { useModal } from "../../hooks/useModal"
 import { useProducts } from "../../hooks/useProducts"
 import api from "../../services/api"
 import { Container } from "./styles"
+import { toast } from 'react-toastify'
 
 interface DeleteProductModalProps {
   productId: string;
@@ -22,8 +23,10 @@ export function DeleteProductModal({ productId }: DeleteProductModalProps) {
     try {
       console.log(product)
       await api.delete(`products/${productId}`)
+      toast.success('Produto excluído com sucesso!')
     } catch (err) {
       console.log(err)
+      toast.error('Ocorreu um erro ao excluir o produto!')
     } finally {
       closeModal()
       push('/')

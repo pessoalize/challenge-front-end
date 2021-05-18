@@ -3,6 +3,7 @@ import { useProducts } from "../../hooks/useProducts"
 import api from "../../services/api"
 import { ProductDetailsForm } from "../ProductDetailsForm"
 import { Container } from "./styles"
+import { toast } from 'react-toastify'
 
 type Product = {
   id: string
@@ -32,8 +33,10 @@ export function EditProductModal({ productId }: EditProductModalProps) {
     try {
       console.log(product)
       await api.put(`/products/${productId}`, product)
+      toast.success('Produto editado com sucesso!')
     } catch (err) {
       console.log(err)
+      toast.error('Ocorreu um erro ao editar o produto!')
     } finally {
       closeModal()
     }

@@ -2,6 +2,7 @@ import { useModal } from "../../hooks/useModal"
 import { useProducts } from "../../hooks/useProducts"
 import api from "../../services/api"
 import { Container } from "./styles"
+import { toast } from 'react-toastify'
 
 interface DeleteVariantModalProps {
   productId: string;
@@ -25,8 +26,10 @@ export function DeleteVariantModal({ productId, variantId }: DeleteVariantModalP
     try {
       console.log(product)
       await api.delete(`/products/variant/${variantId}`)
+      toast.success('Variação excluída com sucesso!')
     } catch (err) {
       console.log(err)
+      toast.error('Ocorreu um erro ao excluir a variação!')
     } finally {
       closeModal()
     }

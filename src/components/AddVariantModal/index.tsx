@@ -3,6 +3,7 @@ import { useProducts } from "../../hooks/useProducts"
 import api from "../../services/api"
 import { VariantDetailsForm } from "../VariantDetailsForm"
 import { Container } from "./styles"
+import { toast } from 'react-toastify'
 
 type Variant = {
   id: string
@@ -28,8 +29,10 @@ export function AddVariantModal({ productId }: AddVariantModalProps) {
     try {
       console.log(variant)
       await api.post(`products/variant/create/${productId}`, variant)
+      toast.success('Variação adicionada com sucesso!')
     } catch (err) {
       console.log(err)
+      toast.error('Ocorreu um erro ao adicionar a variação!')
     } finally {
       closeModal()
     }

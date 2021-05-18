@@ -3,6 +3,7 @@ import { useProducts } from "../../hooks/useProducts"
 import api from "../../services/api"
 import { VariantDetailsForm } from "../VariantDetailsForm"
 import { Container } from "./styles"
+import { toast } from 'react-toastify'
 
 type Variant = {
   id: string
@@ -39,8 +40,10 @@ export function EditVariantModal({ productId, variantId }: EditVariantModalProps
     try {
       console.log(variant)
       await api.put(`/products/variant/${variantId}`, variant)
+      toast.success('Variação editada com sucesso!')
     } catch (err) {
       console.log(err)
+      toast.error('Ocorreu um erro ao editar a variação!')
     } finally {
       closeModal()
     }
