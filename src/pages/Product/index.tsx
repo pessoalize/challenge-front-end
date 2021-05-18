@@ -10,6 +10,7 @@ import { EditProductModal } from "../../components/EditProductModal";
 import { DeleteProductModal } from "../../components/DeleteProductModal";
 import { AddVariantModal } from "../../components/AddVariantModal";
 import { DeleteVariantModal } from "../../components/DeleteVariantModal";
+import { EditVariantModal } from "../../components/EditVariantModal";
 
 export function Product() {
   const { id } = useParams<{ id: string }>()
@@ -82,7 +83,13 @@ export function Product() {
                 <p>{variant.amount} unidades</p>
               </div>
               <footer>
-                <ActionButton>
+                <ActionButton
+                  onClick={
+                    () => openModal(
+                      <EditVariantModal productId={product._id} variantId={variant._id} />
+                    )
+                  }
+                >
                   <FiEdit />
                 </ActionButton>
                 <ActionButton
