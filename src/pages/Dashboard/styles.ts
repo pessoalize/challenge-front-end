@@ -58,6 +58,7 @@ export const Card = styled(Link)`
     overflow: hidden;
     display: flex;
     align-items: center;
+    background: var(--gray-500);
 
     img {
       width: 100%;
