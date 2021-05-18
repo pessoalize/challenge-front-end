@@ -46,6 +46,10 @@ export default createGlobalStyle`
 
   button {
     cursor: pointer;
+
+    &:disabled {
+      opacity: .5;
+    }
   }
 
   code {
