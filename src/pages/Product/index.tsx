@@ -68,7 +68,7 @@ export function Product() {
           </AddButton>
         </header>
 
-        {!product.variants.length && <p>Nenhuma variação existente.</p>}
+        {!product.variants.length && <p><i>Nenhuma variação existente.</i></p>}
 
         <Grid>
           {product.variants.map(variant => (

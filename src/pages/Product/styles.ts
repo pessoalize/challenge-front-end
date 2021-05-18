@@ -16,7 +16,6 @@ export const Container = styled.div`
 
   h2 {
     font-size: 2rem;
-    margin-bottom: 1.5rem;
     color: var(--gray-900)
   }
 `
@@ -73,7 +72,6 @@ export const MainProduct = styled.div`
       em {
         font-size: 2rem;
       }
-      
     }
 
     footer {
