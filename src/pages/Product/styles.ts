@@ -12,6 +12,25 @@ export const Container = styled.div`
     align-items: center;
     margin-bottom: 2.5rem;
     color: var(--gray-100);
+    position: relative;
+
+    small {
+      position: absolute;
+      top: -1rem;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      color: var(--gray-500);
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        margin-right: .25rem;
+        &:hover {
+          text-decoration: underline;
+        } 
+      }
+    }
 
     h1 {
       font-size: 2rem;

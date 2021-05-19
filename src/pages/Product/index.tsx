@@ -2,7 +2,7 @@ import { useParams } from "react-router";
 import { Header } from "../../components/Header";
 import { useProducts } from "../../hooks/useProducts";
 import { ActionButton, BackButton, Container, MainProduct, AddButton, Grid, Card } from "./styles";
-import { FiChevronLeft, FiEdit, FiTrash } from 'react-icons/fi'
+import { FiChevronRight, FiChevronLeft, FiEdit, FiTrash } from 'react-icons/fi'
 import { useHistory } from 'react-router'
 import formatPrice from "../../utils/formatPrice";
 import { useModal } from "../../hooks/useModal";
@@ -11,6 +11,7 @@ import { DeleteProductModal } from "../../components/DeleteProductModal";
 import { AddVariantModal } from "../../components/AddVariantModal";
 import { DeleteVariantModal } from "../../components/DeleteVariantModal";
 import { EditVariantModal } from "../../components/EditVariantModal";
+import { Link } from "react-router-dom";
 
 export function Product() {
   const { id } = useParams<{ id: string }>()
@@ -26,6 +27,7 @@ export function Product() {
       <Header />
       <Container>
         <header>
+          <small><Link to="/">Produtos</Link><FiChevronRight /></small>
           <h1>{product.name}</h1>
           <BackButton onClick={goBack}><FiChevronLeft /></BackButton>
         </header>
