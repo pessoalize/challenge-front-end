@@ -66,7 +66,7 @@ export default createGlobalStyle`
     font-weight: 400;
   }
 
-  textarea {
+  textarea, input, button {
     font-family: inherit;
   }
 
