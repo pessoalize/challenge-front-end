@@ -35,7 +35,7 @@ export function DeleteProductModal({ productId }: DeleteProductModalProps) {
 
   return (
     <Container>
-      <header>Exluir Produto</header>
+      <header>Excluir Produto</header>
 
       <p>
         Deseja realmente excluir o produto <b>{product.name}</b>?
