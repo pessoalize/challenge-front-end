@@ -65,4 +65,8 @@ export default createGlobalStyle`
   h1, h2, h3 {
     font-weight: 400;
   }
+
+  textarea {
+    font-family: inherit;
+  }
 `
