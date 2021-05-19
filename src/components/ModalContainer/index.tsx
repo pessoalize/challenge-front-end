@@ -7,7 +7,7 @@ interface ModalProps {
   isOpen: boolean;
 }
 
-export function Modal({ children, isOpen }: ModalProps) {
+export function ModalContainer({ children, isOpen }: ModalProps) {
   const { closeModal } = useModal()
   return (
     <Container

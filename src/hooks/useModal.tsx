@@ -1,5 +1,5 @@
 import { createContext, ReactNode, useContext, useState } from "react";
-import { Modal } from "../components/Modal";
+import { ModalContainer } from "../components/ModalContainer";
 
 type ModalContextData = {
   openModal(modalContent: ReactNode): void
@@ -28,9 +28,9 @@ export function ModalProvider({ children }: ModalProviderProps) {
   return (
     <ModalContext.Provider value={{ openModal, closeModal }}>
       {children}
-      <Modal isOpen={isOpen}>
+      <ModalContainer isOpen={isOpen}>
         {content}
-      </Modal>
+      </ModalContainer>
     </ModalContext.Provider>
   )
 }
