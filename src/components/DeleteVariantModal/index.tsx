@@ -24,11 +24,9 @@ export function DeleteVariantModal({ productId, variantId }: DeleteVariantModalP
 
   async function handleDeleteVariant() {
     try {
-      console.log(product)
       await api.delete(`/products/variant/${variantId}`)
       toast.success('Variação excluída com sucesso!')
     } catch (err) {
-      console.log(err)
       toast.error('Ocorreu um erro ao excluir a variação!')
     } finally {
       closeModal()

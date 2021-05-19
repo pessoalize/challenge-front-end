@@ -27,11 +27,9 @@ export function AddVariantModal({ productId }: AddVariantModalProps) {
 
   async function handleAddVariant(variant: Omit<Variant, 'id'>) {
     try {
-      console.log(variant)
       await api.post(`products/variant/create/${productId}`, variant)
       toast.success('Variação adicionada com sucesso!')
     } catch (err) {
-      console.log(err)
       toast.error('Ocorreu um erro ao adicionar a variação!')
     } finally {
       closeModal()

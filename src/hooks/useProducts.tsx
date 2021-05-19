@@ -29,7 +29,6 @@ export function ProductsProvider({ children }: ProductsProviderProps) {
   useEffect(() => {
     socket.on('GET_ALL_PRODUCTS', (products: Product[]) => {
       setProducts(products)
-      console.log({ products })
     })
   }, [])
 

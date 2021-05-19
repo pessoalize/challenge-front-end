@@ -21,11 +21,9 @@ export function DeleteProductModal({ productId }: DeleteProductModalProps) {
 
   async function handleDeleteProduct() {
     try {
-      console.log(product)
       await api.delete(`products/${productId}`)
       toast.success('Produto excluído com sucesso!')
     } catch (err) {
-      console.log(err)
       toast.error('Ocorreu um erro ao excluir o produto!')
     } finally {
       closeModal()

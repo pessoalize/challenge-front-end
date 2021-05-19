@@ -34,15 +34,11 @@ export function EditVariantModal({ productId, variantId }: EditVariantModalProps
 
   const { amount, name, price, picture } = variant;
 
-  console.log({ variant })
-
   async function handleEditVariant(variant: Omit<Variant, 'id'>) {
     try {
-      console.log(variant)
       await api.put(`/products/variant/${variantId}`, variant)
       toast.success('Variação editada com sucesso!')
     } catch (err) {
-      console.log(err)
       toast.error('Ocorreu um erro ao editar a variação!')
     } finally {
       closeModal()

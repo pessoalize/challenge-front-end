@@ -18,7 +18,6 @@ export function AddProductModal() {
 
   async function handleAddProduct(product: Omit<Product, 'id'>) {
     try {
-      console.log(product)
       await api.post('products/create', product)
       toast.success('Produto adicionado com sucesso!')
     } catch (err) {

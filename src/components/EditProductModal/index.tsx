@@ -31,11 +31,9 @@ export function EditProductModal({ productId }: EditProductModalProps) {
 
   async function handleEditProduct(product: Omit<Product, 'id'>) {
     try {
-      console.log(product)
       await api.put(`/products/${productId}`, product)
       toast.success('Produto editado com sucesso!')
     } catch (err) {
-      console.log(err)
       toast.error('Ocorreu um erro ao editar o produto!')
     } finally {
       closeModal()
