@@ -107,6 +107,7 @@ export const ActionButton = styled.button`
   background: var(--blue-900);
   color: var(--white);
   font-size: 1.25rem;
+  font-weight: 700;
   border: none;
   border-radius: .25rem;
   transition: filter .2s;
@@ -114,7 +115,7 @@ export const ActionButton = styled.button`
   align-items: center;
   justify-content: center;
   line-height: 1rem;
-  
+
   &:hover {
     filter: brightness(.6)
   }
@@ -125,6 +126,10 @@ export const ActionButton = styled.button`
 
   & + button {
     margin-left: 1rem;
+  }
+
+  span {
+    font-size: 1rem;
   }
 `
 
