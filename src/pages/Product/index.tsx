@@ -12,6 +12,7 @@ import { AddVariantModal } from "../../components/AddVariantModal";
 import { DeleteVariantModal } from "../../components/DeleteVariantModal";
 import { EditVariantModal } from "../../components/EditVariantModal";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export function Product() {
   const { id } = useParams<{ id: string }>()
@@ -19,6 +20,10 @@ export function Product() {
   const product = getProduct(id)
   const { goBack } = useHistory();
   const { openModal } = useModal()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [id])
 
   if (!product) return null
 
