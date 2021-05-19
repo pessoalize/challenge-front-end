@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 import { useModal } from '../../hooks/useModal'
-import { Container } from './styles'
+import { Container, CloseButton } from './styles'
+import { FiX } from 'react-icons/fi'
 
 interface ModalProps {
   children: ReactNode;
@@ -20,6 +21,9 @@ export function ModalContainer({ children, isOpen }: ModalProps) {
         }
       }}
     >
+      <CloseButton onClick={closeModal}>
+        <FiX />
+      </CloseButton>
       {children}
     </Container>
   )

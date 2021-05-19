@@ -15,3 +15,18 @@ export const Container = styled(ReactModal)`
   background: var(--white);
   border-radius: .25rem;
 `
+
+export const CloseButton = styled.button`
+  position: absolute;
+  background: transparent;
+  border: none;
+  right: 0;
+  top: 0;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  width: 2rem;
+  margin: 2rem;
+`
