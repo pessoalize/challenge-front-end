@@ -36,7 +36,7 @@ export function VariantDetailsForm({ onSubmit, submitButtonText, initialValues =
           <Field name="picture" type="text" />
           </label>
           <label style={{ width: '45%' }}>
-            Preço
+            Preço (R$)
           <Field name="price" type="number" />
           </label>
           <label style={{ width: '45%' }}>

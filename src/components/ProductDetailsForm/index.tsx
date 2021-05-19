@@ -42,7 +42,7 @@ export function ProductDetailsForm({ onSubmit, submitButtonText, initialValues =
           <Field name="description" component="textarea" />
           </label>
           <label style={{ width: '45%' }}>
-            Preço
+            Preço (R$)
           <Field name="price" type="number" />
           </label>
           <label style={{ width: '45%' }}>
