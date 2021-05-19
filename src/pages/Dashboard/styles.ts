@@ -12,7 +12,11 @@ export const Container = styled.div`
     flex: 1;
     align-items: center;
     margin-bottom: 2.5rem;
-    color: var(--gray-100)
+    color: var(--gray-100);
+
+    h1 {
+      font-size: 2rem;
+    }
   }
 `
 
