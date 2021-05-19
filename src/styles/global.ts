@@ -69,4 +69,8 @@ export default createGlobalStyle`
   textarea {
     font-family: inherit;
   }
+
+  input, textarea {
+    color: var(--gray-900)
+  }
 `
