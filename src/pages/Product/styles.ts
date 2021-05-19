@@ -37,7 +37,7 @@ export const Container = styled.div`
     }
 
     h2 {
-      font-size: 2rem;
+      font-size: 1.75rem;
       color: var(--gray-900)
     }
   }
