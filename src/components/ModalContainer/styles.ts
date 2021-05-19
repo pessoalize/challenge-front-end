@@ -29,4 +29,5 @@ export const CloseButton = styled.button`
   height: 2rem;
   width: 2rem;
   margin: 2rem;
+  color: var(--gray-900);
 `
